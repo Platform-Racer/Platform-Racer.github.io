@@ -24,6 +24,12 @@ function writeNewPost(username, score, time) {
     myDatabase.ref("High Scores").push(postData);
 }
 
+function iNfOPulLFrOMDaTAbAsE() {
+    var players = myDatabase.ref("_______ <- why is this blank?").on("child_added", function (snapshot) {
+        $("#secret").append('<li>' + snapshot.val().flag + '</li>');
+    });
+}
+
 //Fill High Score List
 function fillHighScoreList() {
     var players = myDatabase.ref("High Scores").orderByChild('time').on("child_added", function (snapshot) {
